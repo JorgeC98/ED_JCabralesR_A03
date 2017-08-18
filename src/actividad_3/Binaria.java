@@ -9,8 +9,8 @@ package actividad_3;
  *
  * @author JorgeRicardo
  */
-public class Binaria extends FetchClass {
-    //Algoritmo de busqueda binaria
+public class Binaria extends FetchClass{
+//Algoritmo de busqueda binaria
     @Override
     public int fetch(int p) { //Recibe como parametro el numero deseado
         int inicio, fin, centro; //Se definen variables de inicio, final y centro 
@@ -18,7 +18,7 @@ public class Binaria extends FetchClass {
         inicio = 0; //inicializa
         fin = vector.length - 1; //declarar valor de var Fin como tamaño del arreglo menos 1
         
-        while (inicio<fin){ //Mientras que inicio sea menor que fin se hara la busqueda
+        while (inicio<=fin){ //Mientras que inicio sea menor que fin se hara la busqueda
             centro = (inicio+fin)/2; //Se calcula la posicion del centro
             valorCentro = vector[centro]; //Se posiciona en en el vector          
             if (valorCentro == p){ //Si en este centro se encuentra el valor
@@ -34,4 +34,25 @@ public class Binaria extends FetchClass {
         return -1;
     }
     
+    
+    /**
+     *
+     * @param v
+     */
+    
+    public void seleccion(int[] v) {
+        int menor, auxiliar;
+        
+        for (int i=0; i<v.length;i++){
+             menor = i;
+             for (int j = i+1;j<v.length;j++) {
+                 if ( v[j] < v[menor] ) {
+                     menor = j;
+                 }
+             }
+             auxiliar = v[i];
+             v[i] = v[menor];
+             v[menor] = auxiliar;
+        }
+    }
 }
