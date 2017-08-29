@@ -11,4 +11,5 @@ package actividad_3;
  */
 public interface IOrdenamiento {
      public abstract void seleccion(int[] v);
+     public abstract void insercion(int[] v); 
 }

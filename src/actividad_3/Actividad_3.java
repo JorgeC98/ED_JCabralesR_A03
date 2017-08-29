@@ -22,7 +22,7 @@ public class Actividad_3 {
         System.out.println("Introduzca el numero de elementos del arreglo ");
         int x = tec.nextInt();
         //Se instancia un objeto de la clase Secuencial para una busqueda secuencial
-        Secuencial os = new Secuencial();
+        Binaria os = new Binaria();
         //Se crea el arreglo
         os.setV(os.randomV(x));
         //Se muestran los valores del arreglo 

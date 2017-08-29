@@ -11,7 +11,7 @@ package actividad_3;
  */
 public class Secuencial extends FetchClass {
     //Algoritmo de busqueda secuencial 
-    @Override
+     @Override
     public int fetch(int n) { //Recibe como parametro el numero a buscar
         for(int i=0;i<vector.length;i++){ 
             {
